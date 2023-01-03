@@ -6,10 +6,34 @@
         xmlns:local="clr-namespace:Chess"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            
+            <!-- Black Pieces Images -->
+            <BitmapImage x:Key="black_pawn" UriSource="/Resources/black_pawn.png"/>
+            <BitmapImage x:Key="black_king" UriSource="/Resources/black_king.png"/>
+            <BitmapImage x:Key="black_queen" UriSource="/Resources/black_queen.png"/>
+            <BitmapImage x:Key="black_bishop" UriSource="/Resources/black_bishop.png"/>
+            <BitmapImage x:Key="black_knight" UriSource="/Resources/black_knight.png"/>
+            <BitmapImage x:Key="black_rook" UriSource="/Resources/black_rook.png"/>
+
+            <!-- White Pieces Images -->
+            <BitmapImage x:Key="white_pawn" UriSource="/Resources/white_pawn.png"/>
+            <BitmapImage x:Key="white_king" UriSource="/Resources/white_king.png"/>
+            <BitmapImage x:Key="white_queen" UriSource="/Resources/white_queen.png"/>
+            <BitmapImage x:Key="white_bishop" UriSource="/Resources/white_bishop.png"/>
+            <BitmapImage x:Key="white_knight" UriSource="/Resources/white_knight.png"/>
+            <BitmapImage x:Key="white_rook" UriSource="/Resources/white_rook.png"/>
+            
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid x:Name="board" Height="320" Width="320" Margin="50,0,400,0"                    
                      Background="White">
-            <Border BorderThickness="1" BorderBrush="Black">
+
+            <Border BorderThickness="2" BorderBrush="Black">
+
                 <!-- Coloring black and white squares -->
                 <Grid>
                     <Grid.RowDefinitions>
@@ -32,52 +56,130 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Row="0" Grid.Column="1" Background="Black"/>
-                    <Grid Grid.Row="0" Grid.Column="3" Background="Black"/>
-                    <Grid Grid.Row="0" Grid.Column="5" Background="Black"/>
-                    <Grid Grid.Row="0" Grid.Column="7" Background="Black"/>
 
-                    <Grid Grid.Row="1" Grid.Column="0" Background="Black"/>
-                    <Grid Grid.Row="1" Grid.Column="2" Background="Black"/>
-                    <Grid Grid.Row="1" Grid.Column="4" Background="Black"/>
-                    <Grid Grid.Row="1" Grid.Column="6" Background="Black"/>
+                    <Grid Grid.Row="0" Grid.Column="0" Background="#D4A150"/>
+                    <Grid Grid.Row="0" Grid.Column="1" Background="#8A4921"/>
+                    <Grid Grid.Row="0" Grid.Column="2" Background="#D4A150"/>
+                    <Grid Grid.Row="0" Grid.Column="3" Background="#8A4921"/>
+                    <Grid Grid.Row="0" Grid.Column="4" Background="#D4A150"/>
+                    <Grid Grid.Row="0" Grid.Column="5" Background="#8A4921"/>
+                    <Grid Grid.Row="0" Grid.Column="6" Background="#D4A150"/>
+                    <Grid Grid.Row="0" Grid.Column="7" Background="#8A4921"/>
 
-                    <Grid Grid.Row="2" Grid.Column="1" Background="Black"/>
-                    <Grid Grid.Row="2" Grid.Column="3" Background="Black"/>
-                    <Grid Grid.Row="2" Grid.Column="5" Background="Black"/>
-                    <Grid Grid.Row="2" Grid.Column="7" Background="Black"/>
+                    <Grid Grid.Row="1" Grid.Column="0" Background="#8A4921"/>
+                    <Grid Grid.Row="1" Grid.Column="1" Background="#D4A150"/>
+                    <Grid Grid.Row="1" Grid.Column="2" Background="#8A4921"/>
+                    <Grid Grid.Row="1" Grid.Column="3" Background="#D4A150"/>
+                    <Grid Grid.Row="1" Grid.Column="4" Background="#8A4921"/>
+                    <Grid Grid.Row="1" Grid.Column="5" Background="#D4A150"/>
+                    <Grid Grid.Row="1" Grid.Column="6" Background="#8A4921"/>
+                    <Grid Grid.Row="1" Grid.Column="7" Background="#D4A150"/>
 
-                    <Grid Grid.Row="3" Grid.Column="0" Background="Black"/>
-                    <Grid Grid.Row="3" Grid.Column="2" Background="Black"/>
-                    <Grid Grid.Row="3" Grid.Column="4" Background="Black"/>
-                    <Grid Grid.Row="3" Grid.Column="6" Background="Black"/>
+                    <Grid Grid.Row="2" Grid.Column="0" Background="#D4A150"/>
+                    <Grid Grid.Row="2" Grid.Column="1" Background="#8A4921"/>
+                    <Grid Grid.Row="2" Grid.Column="2" Background="#D4A150"/>
+                    <Grid Grid.Row="2" Grid.Column="3" Background="#8A4921"/>
+                    <Grid Grid.Row="2" Grid.Column="4" Background="#D4A150"/>
+                    <Grid Grid.Row="2" Grid.Column="5" Background="#8A4921"/>
+                    <Grid Grid.Row="2" Grid.Column="6" Background="#D4A150"/>
+                    <Grid Grid.Row="2" Grid.Column="7" Background="#8A4921"/>
 
-                    <Grid Grid.Row="4" Grid.Column="1" Background="Black"/>
-                    <Grid Grid.Row="4" Grid.Column="3" Background="Black"/>
-                    <Grid Grid.Row="4" Grid.Column="5" Background="Black"/>
-                    <Grid Grid.Row="4" Grid.Column="7" Background="Black"/>
+                    <Grid Grid.Row="3" Grid.Column="0" Background="#8A4921"/>
+                    <Grid Grid.Row="3" Grid.Column="1" Background="#D4A150"/>
+                    <Grid Grid.Row="3" Grid.Column="2" Background="#8A4921"/>
+                    <Grid Grid.Row="3" Grid.Column="3" Background="#D4A150"/>
+                    <Grid Grid.Row="3" Grid.Column="4" Background="#8A4921"/>
+                    <Grid Grid.Row="3" Grid.Column="5" Background="#D4A150"/>
+                    <Grid Grid.Row="3" Grid.Column="6" Background="#8A4921"/>
+                    <Grid Grid.Row="3" Grid.Column="7" Background="#D4A150"/>
 
-                    <Grid Grid.Row="5" Grid.Column="0" Background="Black"/>
-                    <Grid Grid.Row="5" Grid.Column="2" Background="Black"/>
-                    <Grid Grid.Row="5" Grid.Column="4" Background="Black"/>
-                    <Grid Grid.Row="5" Grid.Column="6" Background="Black"/>
+                    <Grid Grid.Row="4" Grid.Column="0" Background="#D4A150"/>
+                    <Grid Grid.Row="4" Grid.Column="1" Background="#8A4921"/>
+                    <Grid Grid.Row="4" Grid.Column="2" Background="#D4A150"/>
+                    <Grid Grid.Row="4" Grid.Column="3" Background="#8A4921"/>
+                    <Grid Grid.Row="4" Grid.Column="4" Background="#D4A150"/>
+                    <Grid Grid.Row="4" Grid.Column="5" Background="#8A4921"/>
+                    <Grid Grid.Row="4" Grid.Column="6" Background="#D4A150"/>
+                    <Grid Grid.Row="4" Grid.Column="7" Background="#8A4921"/>
 
-                    <Grid Grid.Row="6" Grid.Column="1" Background="Black"/>
-                    <Grid Grid.Row="6" Grid.Column="3" Background="Black"/>
-                    <Grid Grid.Row="6" Grid.Column="5" Background="Black"/>
-                    <Grid Grid.Row="6" Grid.Column="7" Background="Black"/>
+                    <Grid Grid.Row="5" Grid.Column="0" Background="#8A4921"/>
+                    <Grid Grid.Row="5" Grid.Column="1" Background="#D4A150"/>
+                    <Grid Grid.Row="5" Grid.Column="2" Background="#8A4921"/>
+                    <Grid Grid.Row="5" Grid.Column="3" Background="#D4A150"/>
+                    <Grid Grid.Row="5" Grid.Column="4" Background="#8A4921"/>
+                    <Grid Grid.Row="5" Grid.Column="5" Background="#D4A150"/>
+                    <Grid Grid.Row="5" Grid.Column="6" Background="#8A4921"/>
+                    <Grid Grid.Row="5" Grid.Column="7" Background="#D4A150"/>
 
-                    <Grid Grid.Row="7" Grid.Column="0" Background="Black"/>
-                    <Grid Grid.Row="7" Grid.Column="2" Background="Black"/>
-                    <Grid Grid.Row="7" Grid.Column="4" Background="Black"/>
-                    <Grid Grid.Row="7" Grid.Column="6" Background="Black"/>
+                    <Grid Grid.Row="6" Grid.Column="0" Background="#D4A150"/>
+                    <Grid Grid.Row="6" Grid.Column="1" Background="#8A4921"/>
+                    <Grid Grid.Row="6" Grid.Column="2" Background="#D4A150"/>
+                    <Grid Grid.Row="6" Grid.Column="3" Background="#8A4921"/>
+                    <Grid Grid.Row="6" Grid.Column="4" Background="#D4A150"/>
+                    <Grid Grid.Row="6" Grid.Column="5" Background="#8A4921"/>
+                    <Grid Grid.Row="6" Grid.Column="6" Background="#D4A150"/>
+                    <Grid Grid.Row="6" Grid.Column="7" Background="#8A4921"/>
+
+                    <Grid Grid.Row="7" Grid.Column="0" Background="#8A4921"/>
+                    <Grid Grid.Row="7" Grid.Column="1" Background="#D4A150"/>
+                    <Grid Grid.Row="7" Grid.Column="2" Background="#8A4921"/>
+                    <Grid Grid.Row="7" Grid.Column="3" Background="#D4A150"/>
+                    <Grid Grid.Row="7" Grid.Column="4" Background="#8A4921"/>
+                    <Grid Grid.Row="7" Grid.Column="5" Background="#D4A150"/>
+                    <Grid Grid.Row="7" Grid.Column="6" Background="#8A4921"/>
+                    <Grid Grid.Row="7" Grid.Column="7" Background="#D4A150"/>
+                    
+                    <!-- Board Starting Point -->
+                    
+                    <!-- White Pieces -->
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="0" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="1" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="2" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="3" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="4" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="5" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="6" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_pawn}" Grid.Row="6" Grid.Column="7" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource white_rook}" Grid.Row="7" Grid.Column="7" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_rook}" Grid.Row="7" Grid.Column="0" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource white_knight}" Grid.Row="7" Grid.Column="6" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_knight}" Grid.Row="7" Grid.Column="1" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource white_bishop}" Grid.Row="7" Grid.Column="2" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_bishop}" Grid.Row="7" Grid.Column="5" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource white_king}" Grid.Row="7" Grid.Column="4" Stretch="Fill"/>
+                    <Image Source="{DynamicResource white_queen}" Grid.Row="7" Grid.Column="3" Stretch="Fill"/>
+
+                    <!-- Black Pieces -->
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="0" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="1" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="2" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="3" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="4" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="5" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="6" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_pawn}" Grid.Row="1" Grid.Column="7" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource black_rook}" Grid.Row="0" Grid.Column="7" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_rook}" Grid.Row="0" Grid.Column="0" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource black_knight}" Grid.Row="0" Grid.Column="6" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_knight}" Grid.Row="0" Grid.Column="1" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource black_bishop}" Grid.Row="0" Grid.Column="2" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_bishop}" Grid.Row="0" Grid.Column="5" Stretch="Fill"/>
+
+                    <Image Source="{DynamicResource black_king}" Grid.Row="0" Grid.Column="4" Stretch="Fill"/>
+                    <Image Source="{DynamicResource black_queen}" Grid.Row="0" Grid.Column="3" Stretch="Fill"/>
+
+
+
                 </Grid>
-               
+                
             </Border>
-            
-            
-            
         </Grid>
-        
     </Grid>
 </Window>
